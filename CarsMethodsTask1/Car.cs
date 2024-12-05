@@ -10,6 +10,18 @@ namespace CarsMethodsTask1
         public string Brand;
         public string Model;
         private int Year;
+        public Car(string brand, string model)
+        {
+            Console.WriteLine("First constructor...");
+            this.Brand = brand;
+            this.Model = model;
+        }
+
+        public Car(int year, string brand, string model) : this(brand, model)
+        {
+            Console.WriteLine("Second constructor...");
+            SetYear(new DateTime(year, 1, 1));
+        }
 
         public void SetYear(DateTime year)
         {
@@ -22,13 +34,16 @@ namespace CarsMethodsTask1
                 Year = year.Year;
             }
         }
-
-        public int GetYear() => Year;
-
         public void DescribeCar()
         {
-            Console.WriteLine($"This is a {Brand} {Model} from {Year}.");
+            if (string.IsNullOrEmpty(Brand) || string.IsNullOrEmpty(Model) || Year == 0)
+            {
+                Console.WriteLine("Car details are incomplete.");
+            }
+            else
+            {
+                Console.WriteLine($"This is a {Brand} {Model} from {Year}.");
+            }
         }
-
     }
 }
