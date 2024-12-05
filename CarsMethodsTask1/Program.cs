@@ -6,12 +6,14 @@ namespace CarsMethodsTask1
     {
         static void Main(string[] args)
         {
-            Car ToyotaCorolla = new Car();
-            ToyotaCorolla.Brand = "Toyota";
-            ToyotaCorolla.Model = "Corolla";
+            Car ToyotaCorolla = new Car("Toyota", "Corolla");
 
             ToyotaCorolla.SetYear(new DateTime(2023, 1, 1));
             ToyotaCorolla.DescribeCar();
+
+            Car MercedesBenz = new Car(1990, "Mercedes", "Benz");
+            MercedesBenz.DescribeCar();
+
         }
     }
 }
