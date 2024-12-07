@@ -11,6 +11,8 @@ namespace CarsMethodsTask1
         public string Model;
         private int Year;
         private string idnumber;
+        public static int Count = 0;
+
 
         public string IdNumber
         {
@@ -30,14 +32,14 @@ namespace CarsMethodsTask1
 
         public Car(string brand, string model)
         {
-            Console.WriteLine("First constructor...");
             this.Brand = brand;
             this.Model = model;
+            Count++;
+
         }
 
         public Car(int year, string brand, string model) : this(brand, model)
         {
-            Console.WriteLine("Second constructor...");
             SetYear(new DateTime(year, 1, 1));
         }
 

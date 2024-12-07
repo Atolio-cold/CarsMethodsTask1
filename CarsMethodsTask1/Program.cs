@@ -12,11 +12,12 @@ namespace CarsMethodsTask1
             ToyotaCorolla.DescribeCar();
 
             ToyotaCorolla.IdNumber = "2541";
-            Console.WriteLine(ToyotaCorolla.IdNumber);
+            Console.WriteLine($"Id Toyota Corolla: {ToyotaCorolla.IdNumber}");
 
             Car MercedesBenz = new Car(1990, "Mercedes", "Benz");
             MercedesBenz.DescribeCar();
 
+            Console.WriteLine($"Objects of Car type count: {Car.Count}");
         }
     }
 }
