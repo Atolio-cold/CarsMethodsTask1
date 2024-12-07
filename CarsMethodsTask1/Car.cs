@@ -15,10 +15,14 @@ namespace CarsMethodsTask1
         public string IdNumber
         {
             get { return idnumber; }
-            set {
-                if(value.Length <3){
+            set
+            {
+                if (value.Length < 3)
+                {
                     Console.WriteLine("Invalid id number");
-                }else {
+                }
+                else
+                {
                     idnumber = value;
                 }
             }
