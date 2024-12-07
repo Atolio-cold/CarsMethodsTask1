@@ -10,6 +10,20 @@ namespace CarsMethodsTask1
         public string Brand;
         public string Model;
         private int Year;
+        private string idnumber;
+
+        public string IdNumber
+        {
+            get { return idnumber; }
+            set {
+                if(value.Length <3){
+                    Console.WriteLine("Invalid id number");
+                }else {
+                    idnumber = value;
+                }
+            }
+        }
+
         public Car(string brand, string model)
         {
             Console.WriteLine("First constructor...");
