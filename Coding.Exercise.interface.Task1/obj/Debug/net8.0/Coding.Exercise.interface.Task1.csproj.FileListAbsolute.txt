@@ -1,0 +1,14 @@
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\bin\Debug\net8.0\Coding.Exercise.interface.Task1.exe
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\bin\Debug\net8.0\Coding.Exercise.interface.Task1.deps.json
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\bin\Debug\net8.0\Coding.Exercise.interface.Task1.runtimeconfig.json
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\bin\Debug\net8.0\Coding.Exercise.interface.Task1.dll
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\bin\Debug\net8.0\Coding.Exercise.interface.Task1.pdb
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.GeneratedMSBuildEditorConfig.editorconfig
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.AssemblyInfoInputs.cache
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.AssemblyInfo.cs
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.csproj.CoreCompileInputs.cache
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.dll
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\refint\Coding.Exercise.interface.Task1.dll
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.pdb
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\Coding.Exercise.interface.Task1.genruntimeconfig.cache
+C:\anton\programming\C#\PowerShell\Coding.Exercise.interface.Task1\obj\Debug\net8.0\ref\Coding.Exercise.interface.Task1.dll
