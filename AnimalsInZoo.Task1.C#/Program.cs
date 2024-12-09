@@ -9,10 +9,24 @@ namespace AnimalsInZoo
     {
         void MakeSound();
         void Describe();
+        public string GetName();
+        public string GetHabitat();
+
+
     }
 
     public class Lion : IZooAnimal
     {
+        public string GetName()
+        {
+            return "Lion";
+        }
+
+        public string GetHabitat()
+        {
+            return "Savannah";
+        }
+
         public void MakeSound()
         {
             Console.WriteLine("Roar!");
@@ -24,6 +38,16 @@ namespace AnimalsInZoo
     }
     public class Elephant : IZooAnimal
     {
+        public string GetHabitat()
+        {
+            return "Savannah";
+        }
+
+        public string GetName()
+        {
+            return "Elephant";
+        }
+
         public void MakeSound()
         {
             Console.WriteLine("Trumpet!");
@@ -36,6 +60,16 @@ namespace AnimalsInZoo
 
     public class Tiger : IZooAnimal
     {
+        public string GetHabitat()
+        {
+            return "ZOO";
+        }
+
+        public string GetName()
+        {
+            return "Tiger";
+        }
+
         public void MakeSound()
         {
             Console.WriteLine("Wrrr!");
@@ -43,12 +77,21 @@ namespace AnimalsInZoo
         public void Describe()
         {
             Console.WriteLine("This is an Tiger.It is one of the fastest land animals.");
-
         }
 
     }
     public class Monkey : IZooAnimal
     {
+        public string GetHabitat()
+        {
+            return "Forest";
+        }
+
+        public string GetName()
+        {
+            return "Monkey";
+        }
+
         public void MakeSound()
         {
             Console.WriteLine("Uhuhuh!");
@@ -69,13 +112,38 @@ namespace AnimalsInZoo
             listofAnimal.Add(new Tiger());
             listofAnimal.Add(new Monkey());
 
+            Dictionary<string, List<IZooAnimal>> habitatGroups = new Dictionary<string, List<IZooAnimal>>();
 
             foreach (IZooAnimal animal in listofAnimal)
             {
-                animal.MakeSound();
-                animal.Describe();
-
+                string habitat = animal.GetHabitat();
+                if (!habitatGroups.ContainsKey(habitat))
+                {
+                    habitatGroups[habitat] = new List<IZooAnimal>();
+                }
+                habitatGroups[habitat].Add(animal);
             }
+
+
+            foreach (var habitatGroup in habitatGroups)
+            {
+                Console.WriteLine($"Habitat: {habitatGroup.Key}");
+                foreach (var animal in habitatGroup.Value)
+                {
+                    Console.WriteLine($" - {animal.GetName()}");
+                }
+            }
+            Console.WriteLine();
+
+
+            foreach (IZooAnimal animal in listofAnimal)
+            {
+                Console.WriteLine($"Animal: {animal.GetName()}");
+                animal.Describe();
+                animal.MakeSound();
+                Console.WriteLine();
+            }
+
         }
     }
 }
