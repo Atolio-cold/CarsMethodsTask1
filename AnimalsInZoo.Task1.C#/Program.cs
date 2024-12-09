@@ -11,12 +11,13 @@ namespace AnimalsInZoo
         void Describe();
         public string GetName();
         public string GetHabitat();
-
+        public void Feed(string food);
 
     }
 
     public class Lion : IZooAnimal
     {
+        string favoriteFood = "meat";
         public string GetName()
         {
             return "Lion";
@@ -25,6 +26,20 @@ namespace AnimalsInZoo
         public string GetHabitat()
         {
             return "Savannah";
+        }
+
+        public void Feed(string food)
+        {
+            if (food == favoriteFood)
+            {
+                Console.WriteLine($"{GetName()} happily eats {food}.");
+
+            }
+            else
+            {
+                Console.WriteLine($"{GetName()} doesn't eat {food}.");
+
+            }
         }
 
         public void MakeSound()
@@ -38,6 +53,8 @@ namespace AnimalsInZoo
     }
     public class Elephant : IZooAnimal
     {
+        string favoriteFood = "grass";
+
         public string GetHabitat()
         {
             return "Savannah";
@@ -48,6 +65,19 @@ namespace AnimalsInZoo
             return "Elephant";
         }
 
+        public void Feed(string food)
+        {
+            if (food == favoriteFood)
+            {
+                Console.WriteLine($"{GetName()} happily eats {food}.");
+
+            }
+            else
+            {
+                Console.WriteLine($"{GetName()} doesn't eat {food}.");
+
+            }
+        }
         public void MakeSound()
         {
             Console.WriteLine("Trumpet!");
@@ -60,6 +90,8 @@ namespace AnimalsInZoo
 
     public class Tiger : IZooAnimal
     {
+        string favoriteFood = "meat";
+
         public string GetHabitat()
         {
             return "ZOO";
@@ -68,6 +100,19 @@ namespace AnimalsInZoo
         public string GetName()
         {
             return "Tiger";
+        }
+        public void Feed(string food)
+        {
+            if (food == favoriteFood)
+            {
+                Console.WriteLine($"{GetName()} happily eats {food}.");
+
+            }
+            else
+            {
+                Console.WriteLine($"{GetName()} doesn't eat {food}.");
+
+            }
         }
 
         public void MakeSound()
@@ -82,11 +127,25 @@ namespace AnimalsInZoo
     }
     public class Monkey : IZooAnimal
     {
+        string favoriteFood = "bananas";
+
         public string GetHabitat()
         {
             return "Forest";
         }
+        public void Feed(string food)
+        {
+            if (food == favoriteFood)
+            {
+                Console.WriteLine($"{GetName()} happily eats {food}.");
 
+            }
+            else
+            {
+                Console.WriteLine($"{GetName()} doesn't eat {food}.");
+
+            }
+        }
         public string GetName()
         {
             return "Monkey";
@@ -134,6 +193,15 @@ namespace AnimalsInZoo
                 }
             }
             Console.WriteLine();
+
+            foreach (IZooAnimal animal in listofAnimal)
+            {
+                Console.WriteLine($"Feeding {animal.GetName()}:");
+                animal.Feed("meat");
+                animal.Feed("grass");
+                animal.Feed("bananas");
+                Console.WriteLine();
+            }
 
 
             foreach (IZooAnimal animal in listofAnimal)
